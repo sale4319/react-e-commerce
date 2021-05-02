@@ -8,4 +8,4 @@ Frontend done in React, and connected to Commerce.js API Backend.
 
 #### `Preview`
 
-Will be soon available on heroku
+https://trusting-jang-9f5ec3.netlify.app
