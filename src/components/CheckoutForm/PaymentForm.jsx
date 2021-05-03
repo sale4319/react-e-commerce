@@ -8,16 +8,16 @@ import Review from './Review';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_API_KEY);
 
-const PaymentForm = ({ checkoutToken, backStep, shippingData, onCaptureCheckout, nextStep }) => {
+const PaymentForm = ({ checkoutToken, nextStep, backStep, shippingData, onCaptureCheckout }) => {
     const classes = useStyles();
-    const handleSubmint = async (event, elements, stripe) => {
+    const handleSubmit = async (event, elements, stripe) => {
         event.preventDefault();
 
         if (!stripe || !elements) return;
 
-        const CardElement = elements.getElement(CardElement);
+        const cardElement = elements.getElement(CardElement);
 
-        const { error, paymentMethod } = await stripe.createPaymentMethod({ type: 'card', card: CardElement });
+        const { error, paymentMethod } = await stripe.createPaymentMethod({ type: 'card', card: cardElement });
 
         if (error) {
             console.log(error)
@@ -55,7 +55,7 @@ const PaymentForm = ({ checkoutToken, backStep, shippingData, onCaptureCheckout,
             <Elements stripe={stripePromise}>
                 <ElementsConsumer>
                     {({ elements, stripe }) => (
-                        <form onSubmit={(e) => handleSubmint(e, elements, stripe)}>
+                        <form onSubmit={(e) => handleSubmit(e, elements, stripe)}>
                             <CardElement />
                             <br /><br />
                             <div className={classes.button}>
