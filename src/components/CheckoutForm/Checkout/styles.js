@@ -49,4 +49,8 @@ export default makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
+  cardText: {
+    fontFamily: 'Libre Baskerville, serif',
+  },
 }));

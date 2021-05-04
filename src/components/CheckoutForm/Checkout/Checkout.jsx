@@ -71,7 +71,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
             <div className={classes.toolbar} />
             <main className={classes.layout}>
                 <Paper className={classes.paper}>
-                    <Typography variant="h4" align="center">Checkout</Typography>
+                    <Typography variant="h4" align="center" className={classes.cardText}>Checkout</Typography>
                     <Stepper activeStep={activeStep} className={classes.stepper}>
                         {steps.map((step) => (
                             <Step key={step}>

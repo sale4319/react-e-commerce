@@ -17,4 +17,8 @@ export default makeStyles(() => ({
         display: 'flex',
         justifyContent: 'space-between',
     },
+
+    cardText: {
+        fontFamily: 'Libre Baskerville, serif',
+    },
 }));

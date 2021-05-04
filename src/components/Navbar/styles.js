@@ -15,7 +15,10 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
     display: 'flex',
     textDecoration: 'none',
-    fontWeight: 'bold',
+    color: '#666',
+    fontSize: '25px',
+    fontWeight: '700',
+    fontFamily: 'Libre Baskerville, serif',
   },
   image: {
     marginRight: '10px',
