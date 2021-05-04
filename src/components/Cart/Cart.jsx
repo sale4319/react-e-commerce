@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Typography, Button, Grid } from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete';
+import NavigateNext from '@material-ui/icons/NavigateNext';
 import { Link } from 'react-router-dom'
 
 import useStyles from './styles';
@@ -28,8 +30,8 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
             <div className={classes.cardDetails}>
                 <Typography variant="h4">Subtotal: {cart.subtotal.formatted_with_symbol}</Typography>
                 <div>
-                    <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" onClick={onEmptyCart}>Empty Cart</Button>
-                    <Button component={Link} to="/checkout" className={classes.checkoutButton} size="large" type="button" variant="contained" color="primary">Checkout</Button>
+                    <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" startIcon={<DeleteIcon />} onClick={onEmptyCart}>Empty Cart</Button>
+                    <Button component={Link} to="/checkout" className={classes.checkoutButton} size="large" type="button" variant="contained" color="primary" endIcon={<NavigateNext />}>Checkout</Button>
                 </div>
             </div>
         </>
