@@ -8,4 +8,4 @@ Frontend done in React, and connected to Commerce.js API Backend.
 
 #### `Preview`
 
-https://trusting-jang-9f5ec3.netlify.app
+https://react-e-bike-store.netlify.app/
