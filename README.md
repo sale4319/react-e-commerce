@@ -1,11 +1,11 @@
-#### `React E-COMMERCE Project`
+#### React E-COMMERCE Project
 
 This project has functional product page, cart and checkout.
 
-#### `Project Composition`
+#### Project Composition
 
 Frontend done in React, and connected to Commerce.js API Backend.
 
-#### `Preview`
+#### Preview
 
 https://react-e-bike-store.netlify.app/
